@@ -1,0 +1,12 @@
+{
+  "folder-color.pathColors": [
+    {
+      "folderPath": "01-starting-project\\src\\app\\app.component.html\\",
+      "color": "foldercolorizer.yellow"
+    },
+    {
+      "folderPath": "01-starting-project\\src\\app\\app.component.ts\\",
+      "color": "foldercolorizer.yellow"
+    }
+  ]
+}
