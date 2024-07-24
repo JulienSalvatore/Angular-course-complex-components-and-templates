@@ -7,6 +7,14 @@
     {
       "folderPath": "01-starting-project\\src\\app\\app.component.ts\\",
       "color": "foldercolorizer.yellow"
+    },
+    {
+      "folderPath": "01-starting-project\\src\\app\\dashboard\\tickets\\new-ticket\\",
+      "color": "foldercolorizer.pink"
+    },
+    {
+      "folderPath": "01-starting-project\\src\\app\\dashboard\\tickets\\ticket\\",
+      "color": "foldercolorizer.green"
     }
   ]
 }
