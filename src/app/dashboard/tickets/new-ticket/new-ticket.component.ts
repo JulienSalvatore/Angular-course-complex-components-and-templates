@@ -3,6 +3,9 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  EventEmitter,
+  output,
+  Output,
   viewChild,
   viewChildren,
 } from '@angular/core';
@@ -19,14 +22,17 @@ import { ControlComponent } from '../../../shared/control/control.component';
   styleUrl: './new-ticket.component.css',
 })
 export class NewTicketComponent implements AfterViewInit {
-  // @ViewChild('form') form?: ElementRef<HTMLFormElement>;
-  private form = viewChild.required<ElementRef<HTMLFormElement>>('form');
+  @ViewChild('form') form?: ElementRef<HTMLFormElement>;
+  // private form = viewChild.required<ElementRef<HTMLFormElement>>('form');
+  // @Output() add = new EventEmitter<{ title: string; text: string }>();
+  add = output<{ title: string; text: string }>();
 
   ngAfterViewInit() {
     console.log('AFTER VIEW INIT');
   }
 
   onSubmit(title: string, ticketText: string) {
-    this.form()?.nativeElement.reset();
+    this.add.emit({ title: title, text: ticketText });
+    this.form?.nativeElement.reset();
   }
 }
